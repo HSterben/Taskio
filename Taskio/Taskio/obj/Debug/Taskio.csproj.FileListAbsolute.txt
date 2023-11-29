@@ -1,0 +1,10 @@
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\bin\Debug\Taskio.exe.config
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\bin\Debug\Taskio.exe
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\bin\Debug\Taskio.pdb
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.AssemblyReference.cache
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.MainForm.resources
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.Properties.Resources.resources
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.GenerateResource.cache
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.CoreCompileInputs.cache
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.exe
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.pdb

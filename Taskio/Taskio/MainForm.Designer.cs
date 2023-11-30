@@ -42,7 +42,8 @@
             this.modeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lightModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.darkModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.fileDialogue = new System.Windows.Forms.OpenFileDialog();
+            this.chooseBackgroundImageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,8 @@
             this.fileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openProjectToolStripMenuItem,
             this.createNewProjectToolStripMenuItem,
-            this.projectOverviewToolStripMenuItem});
+            this.projectOverviewToolStripMenuItem,
+            this.chooseBackgroundImageMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
             this.fileMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileMenuItem.Text = "File";
@@ -71,19 +73,19 @@
             // openProjectToolStripMenuItem
             // 
             this.openProjectToolStripMenuItem.Name = "openProjectToolStripMenuItem";
-            this.openProjectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openProjectToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
             this.openProjectToolStripMenuItem.Text = "Open Project";
             // 
             // createNewProjectToolStripMenuItem
             // 
             this.createNewProjectToolStripMenuItem.Name = "createNewProjectToolStripMenuItem";
-            this.createNewProjectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createNewProjectToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
             this.createNewProjectToolStripMenuItem.Text = "Create New Project";
             // 
             // projectOverviewToolStripMenuItem
             // 
             this.projectOverviewToolStripMenuItem.Name = "projectOverviewToolStripMenuItem";
-            this.projectOverviewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.projectOverviewToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
             this.projectOverviewToolStripMenuItem.Text = "Project Overview";
             // 
             // tasksMenuItem
@@ -147,9 +149,20 @@
             this.darkModeMenuItem.Size = new System.Drawing.Size(180, 22);
             this.darkModeMenuItem.Text = "Dark";
             // 
-            // openFileDialog1
+            // fileDialogue
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.fileDialogue.FileName = "fileDialogue";
+            this.fileDialogue.FileOk += new System.ComponentModel.CancelEventHandler(this.fileDialogue_FileOk);
+            // 
+            // chooseBackgroundImageMenuItem
+            // 
+            this.chooseBackgroundImageMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.chooseBackgroundImageMenuItem.Name = "chooseBackgroundImageMenuItem";
+            this.chooseBackgroundImageMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
+            this.chooseBackgroundImageMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.chooseBackgroundImageMenuItem.Text = "Choose Background Image";
+            this.chooseBackgroundImageMenuItem.Click += new System.EventHandler(this.chooseBackgroundImageMenuItem_Click);
             // 
             // MainForm
             // 
@@ -174,7 +187,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openProjectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createNewProjectToolStripMenuItem;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog fileDialogue;
         private System.Windows.Forms.ToolStripMenuItem projectOverviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tasksMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sortingOptionsMenuItem;
@@ -184,6 +197,7 @@
         private System.Windows.Forms.ToolStripMenuItem modeMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lightModeMenuItem;
         private System.Windows.Forms.ToolStripMenuItem darkModeMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chooseBackgroundImageMenuItem;
     }
 }
 

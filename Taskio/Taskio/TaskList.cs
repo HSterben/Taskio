@@ -24,11 +24,14 @@ namespace Taskio
                 // Subscribe to the TaskAdded event to receive the data
                 form.TaskAdded += (name, description, priority) =>
                 {
-                    
+                    Task task = new Task(name, description, priority);
+                    panel.Controls.Remove(addTaskBtn);
+                    panel.Controls.Add(task);
+                    panel.Controls.Add(addTaskBtn);
 
-                    // Use the data to add a task (you can implement your logic here)
-                    // For now, let's just display the data in a message box
-                    MessageBox.Show($"Name: {name}, Description: {description}, Priority: {priority}");
+
+
+                    
                 };
 
                 if (form.ShowDialog() == DialogResult.OK)

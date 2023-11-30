@@ -1,6 +1,6 @@
 ﻿namespace Taskio
 {
-    partial class TaskList
+    partial class Task
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,57 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.priority = new System.Windows.Forms.Label();
+            this.taskName = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.listTitle = new System.Windows.Forms.TextBox();
-            this.addTaskBtn = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // priority
+            // 
+            this.priority.AutoSize = true;
+            this.priority.Location = new System.Drawing.Point(12, 0);
+            this.priority.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.priority.Name = "priority";
+            this.priority.Size = new System.Drawing.Size(0, 13);
+            this.priority.TabIndex = 0;
+            // 
+            // taskName
+            // 
+            this.taskName.AutoSize = true;
+            this.taskName.Location = new System.Drawing.Point(3, 0);
+            this.taskName.Name = "taskName";
+            this.taskName.Size = new System.Drawing.Size(0, 13);
+            this.taskName.TabIndex = 1;
             // 
             // panel
             // 
             this.panel.AutoSize = true;
             this.panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel.Controls.Add(this.listTitle);
-            this.panel.Controls.Add(this.addTaskBtn);
+            this.panel.Controls.Add(this.taskName);
+            this.panel.Controls.Add(this.priority);
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(202, 51);
+            this.panel.Size = new System.Drawing.Size(15, 13);
             this.panel.TabIndex = 0;
             // 
-            // listTitle
-            // 
-            this.listTitle.BackColor = System.Drawing.SystemColors.Control;
-            this.listTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.listTitle.Location = new System.Drawing.Point(3, 3);
-            this.listTitle.Name = "listTitle";
-            this.listTitle.Size = new System.Drawing.Size(193, 16);
-            this.listTitle.TabIndex = 1;
-            this.listTitle.Text = "Task List 1";
-            this.listTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // addTaskBtn
-            // 
-            this.addTaskBtn.Location = new System.Drawing.Point(3, 25);
-            this.addTaskBtn.Name = "addTaskBtn";
-            this.addTaskBtn.Size = new System.Drawing.Size(196, 23);
-            this.addTaskBtn.TabIndex = 2;
-            this.addTaskBtn.Text = "+ Add a task";
-            this.addTaskBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addTaskBtn.UseVisualStyleBackColor = true;
-            this.addTaskBtn.Click += new System.EventHandler(this.addTaskBtn_Click);
-            // 
-            // TaskList
+            // Task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.panel);
-            this.Name = "TaskList";
-            this.Size = new System.Drawing.Size(202, 51);
+            this.Name = "Task";
+            this.Size = new System.Drawing.Size(15, 13);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);
@@ -88,8 +81,8 @@
 
         #endregion
 
+        private System.Windows.Forms.Label priority;
+        private System.Windows.Forms.Label taskName;
         private System.Windows.Forms.FlowLayoutPanel panel;
-        private System.Windows.Forms.TextBox listTitle;
-        private System.Windows.Forms.Button addTaskBtn;
     }
 }

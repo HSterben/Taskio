@@ -20,12 +20,23 @@ namespace Taskio
         private void addTaskBtn_Click(object sender, EventArgs e)
         {
             using (TaskCreationForm form = new TaskCreationForm())
-            { 
-                if (form.ShowDialog() == DialogResult.OK) 
+            {
+                // Subscribe to the TaskAdded event to receive the data
+                form.TaskAdded += (name, description, priority) =>
                 {
-                    //get data from the popup window and use it to add a task
+                    
+
+                    // Use the data to add a task (you can implement your logic here)
+                    // For now, let's just display the data in a message box
+                    MessageBox.Show($"Name: {name}, Description: {description}, Priority: {priority}");
+                };
+
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    // The event handler will handle the data when the form is closed
                 }
             }
         }
     }
+
 }

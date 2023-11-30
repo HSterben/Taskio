@@ -8,3 +8,5 @@ C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.GenerateRe
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.CoreCompileInputs.cache
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.exe
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.pdb
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskCreationForm.resources
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskList.resources

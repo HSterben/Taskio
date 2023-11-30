@@ -34,16 +34,14 @@
             this.openProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectOverviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tasksMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sortingOptionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nameSortMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dueDateSortMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prioritySortMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chooseBackgroundImageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.taskListsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createTaskListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lightModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.darkModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileDialogue = new System.Windows.Forms.OpenFileDialog();
-            this.chooseBackgroundImageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +49,7 @@
             // 
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenuItem,
-            this.tasksMenuItem,
+            this.taskListsMenuItem,
             this.modeMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
@@ -88,41 +86,31 @@
             this.projectOverviewToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
             this.projectOverviewToolStripMenuItem.Text = "Project Overview";
             // 
-            // tasksMenuItem
+            // chooseBackgroundImageMenuItem
             // 
-            this.tasksMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sortingOptionsMenuItem});
-            this.tasksMenuItem.Name = "tasksMenuItem";
-            this.tasksMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.tasksMenuItem.Text = "Tasks";
+            this.chooseBackgroundImageMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.chooseBackgroundImageMenuItem.Name = "chooseBackgroundImageMenuItem";
+            this.chooseBackgroundImageMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
+            this.chooseBackgroundImageMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.chooseBackgroundImageMenuItem.Text = "Choose Background Image";
+            this.chooseBackgroundImageMenuItem.Click += new System.EventHandler(this.chooseBackgroundImageMenuItem_Click);
             // 
-            // sortingOptionsMenuItem
+            // taskListsMenuItem
             // 
-            this.sortingOptionsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nameSortMenuItem,
-            this.dueDateSortMenuItem,
-            this.prioritySortMenuItem});
-            this.sortingOptionsMenuItem.Name = "sortingOptionsMenuItem";
-            this.sortingOptionsMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sortingOptionsMenuItem.Text = "Sort By";
+            this.taskListsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createTaskListMenuItem});
+            this.taskListsMenuItem.Name = "taskListsMenuItem";
+            this.taskListsMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.taskListsMenuItem.Text = "Task Lists";
             // 
-            // nameSortMenuItem
+            // createTaskListMenuItem
             // 
-            this.nameSortMenuItem.Name = "nameSortMenuItem";
-            this.nameSortMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nameSortMenuItem.Text = "Name";
-            // 
-            // dueDateSortMenuItem
-            // 
-            this.dueDateSortMenuItem.Name = "dueDateSortMenuItem";
-            this.dueDateSortMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dueDateSortMenuItem.Text = "Due Date";
-            // 
-            // prioritySortMenuItem
-            // 
-            this.prioritySortMenuItem.Name = "prioritySortMenuItem";
-            this.prioritySortMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.prioritySortMenuItem.Text = "Priority";
+            this.createTaskListMenuItem.Name = "createTaskListMenuItem";
+            this.createTaskListMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.createTaskListMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createTaskListMenuItem.Text = "Create List";
+            this.createTaskListMenuItem.Click += new System.EventHandler(this.createTaskListMenuItem_Click);
             // 
             // modeMenuItem
             // 
@@ -138,38 +126,34 @@
             this.lightModeMenuItem.Checked = true;
             this.lightModeMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.lightModeMenuItem.Name = "lightModeMenuItem";
-            this.lightModeMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lightModeMenuItem.Size = new System.Drawing.Size(101, 22);
             this.lightModeMenuItem.Text = "Light";
             // 
             // darkModeMenuItem
             // 
-            this.darkModeMenuItem.Checked = true;
-            this.darkModeMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.darkModeMenuItem.Name = "darkModeMenuItem";
-            this.darkModeMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.darkModeMenuItem.Size = new System.Drawing.Size(101, 22);
             this.darkModeMenuItem.Text = "Dark";
             // 
             // fileDialogue
             // 
             this.fileDialogue.FileName = "fileDialogue";
-            this.fileDialogue.FileOk += new System.ComponentModel.CancelEventHandler(this.fileDialogue_FileOk);
             // 
-            // chooseBackgroundImageMenuItem
+            // mainPanel
             // 
-            this.chooseBackgroundImageMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.chooseBackgroundImageMenuItem.Name = "chooseBackgroundImageMenuItem";
-            this.chooseBackgroundImageMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.B)));
-            this.chooseBackgroundImageMenuItem.Size = new System.Drawing.Size(290, 22);
-            this.chooseBackgroundImageMenuItem.Text = "Choose Background Image";
-            this.chooseBackgroundImageMenuItem.Click += new System.EventHandler(this.chooseBackgroundImageMenuItem_Click);
+            this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 24);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(800, 426);
+            this.mainPanel.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.menu);
             this.MainMenuStrip = this.menu;
             this.Name = "MainForm";
@@ -189,15 +173,13 @@
         private System.Windows.Forms.ToolStripMenuItem createNewProjectToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog fileDialogue;
         private System.Windows.Forms.ToolStripMenuItem projectOverviewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tasksMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sortingOptionsMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nameSortMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dueDateSortMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem prioritySortMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem taskListsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modeMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lightModeMenuItem;
         private System.Windows.Forms.ToolStripMenuItem darkModeMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chooseBackgroundImageMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel mainPanel;
+        private System.Windows.Forms.ToolStripMenuItem createTaskListMenuItem;
     }
 }
 

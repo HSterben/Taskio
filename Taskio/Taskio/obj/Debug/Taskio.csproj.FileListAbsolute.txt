@@ -11,3 +11,17 @@ C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.pdb
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskCreationForm.resources
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskList.resources
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.Task.resources
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\bin\Debug\Taskio.exe.config
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\bin\Debug\Taskio.exe
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\bin\Debug\Taskio.pdb
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.AssemblyReference.cache
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.SuggestedBindingRedirects.cache
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskCreationForm.resources
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.MainForm.resources
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.Properties.Resources.resources
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskList.resources
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.Task.resources
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.GenerateResource.cache
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.CoreCompileInputs.cache
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.exe
+C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.pdb

@@ -30,7 +30,7 @@ namespace Taskio
         private void createTaskListMenuItem_Click(object sender, EventArgs e)
         {
             TaskList taskList = new TaskList();
-            mainPanel.Controls.Add(taskList);   
+            mainPanel.Controls.Add(taskList);
         }
     }
 }

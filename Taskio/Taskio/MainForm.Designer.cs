@@ -101,14 +101,14 @@
             this.taskListsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createTaskListMenuItem});
             this.taskListsMenuItem.Name = "taskListsMenuItem";
-            this.taskListsMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.taskListsMenuItem.Size = new System.Drawing.Size(67, 20);
             this.taskListsMenuItem.Text = "Task Lists";
             // 
             // createTaskListMenuItem
             // 
             this.createTaskListMenuItem.Name = "createTaskListMenuItem";
             this.createTaskListMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.createTaskListMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createTaskListMenuItem.Size = new System.Drawing.Size(172, 22);
             this.createTaskListMenuItem.Text = "Create List";
             this.createTaskListMenuItem.Click += new System.EventHandler(this.createTaskListMenuItem_Click);
             // 
@@ -155,6 +155,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menu;
             this.Name = "MainForm";
             this.Text = "Taskio";

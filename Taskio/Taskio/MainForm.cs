@@ -23,6 +23,7 @@ namespace Taskio
             if (fileDialogue.ShowDialog() == DialogResult.OK)
             {
                 mainPanel.BackgroundImage = Image.FromFile(fileDialogue.FileName);
+
             }
         }
 

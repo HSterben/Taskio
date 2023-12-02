@@ -56,7 +56,7 @@
             this.listTitle.Name = "listTitle";
             this.listTitle.Size = new System.Drawing.Size(193, 16);
             this.listTitle.TabIndex = 1;
-            this.listTitle.Text = "Task List 1";
+            this.listTitle.Text = "New Task List";
             this.listTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // addTaskBtn

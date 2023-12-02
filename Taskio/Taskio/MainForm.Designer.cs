@@ -37,9 +37,6 @@
             this.chooseBackgroundImageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taskListsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createTaskListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lightModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.darkModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileDialogue = new System.Windows.Forms.OpenFileDialog();
             this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.menu.SuspendLayout();
@@ -49,8 +46,7 @@
             // 
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenuItem,
-            this.taskListsMenuItem,
-            this.modeMenuItem});
+            this.taskListsMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(800, 24);
@@ -101,7 +97,7 @@
             this.taskListsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createTaskListMenuItem});
             this.taskListsMenuItem.Name = "taskListsMenuItem";
-            this.taskListsMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.taskListsMenuItem.Size = new System.Drawing.Size(68, 20);
             this.taskListsMenuItem.Text = "Task Lists";
             // 
             // createTaskListMenuItem
@@ -111,29 +107,6 @@
             this.createTaskListMenuItem.Size = new System.Drawing.Size(172, 22);
             this.createTaskListMenuItem.Text = "Create List";
             this.createTaskListMenuItem.Click += new System.EventHandler(this.createTaskListMenuItem_Click);
-            // 
-            // modeMenuItem
-            // 
-            this.modeMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lightModeMenuItem,
-            this.darkModeMenuItem});
-            this.modeMenuItem.Name = "modeMenuItem";
-            this.modeMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.modeMenuItem.Text = "Mode";
-            // 
-            // lightModeMenuItem
-            // 
-            this.lightModeMenuItem.Checked = true;
-            this.lightModeMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.lightModeMenuItem.Name = "lightModeMenuItem";
-            this.lightModeMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.lightModeMenuItem.Text = "Light";
-            // 
-            // darkModeMenuItem
-            // 
-            this.darkModeMenuItem.Name = "darkModeMenuItem";
-            this.darkModeMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.darkModeMenuItem.Text = "Dark";
             // 
             // fileDialogue
             // 
@@ -175,9 +148,6 @@
         private System.Windows.Forms.OpenFileDialog fileDialogue;
         private System.Windows.Forms.ToolStripMenuItem projectOverviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem taskListsMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modeMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lightModeMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem darkModeMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chooseBackgroundImageMenuItem;
         private System.Windows.Forms.FlowLayoutPanel mainPanel;
         private System.Windows.Forms.ToolStripMenuItem createTaskListMenuItem;

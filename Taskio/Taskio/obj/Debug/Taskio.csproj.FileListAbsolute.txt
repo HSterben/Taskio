@@ -10,7 +10,6 @@ C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.exe
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.pdb
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskCreationForm.resources
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskList.resources
-C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.Task.resources
 C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\bin\Debug\Taskio.exe.config
 C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\bin\Debug\Taskio.exe
 C:\Users\2291195\Downloads\Taskio\Taskio\Taskio\bin\Debug\Taskio.pdb
@@ -41,3 +40,7 @@ C:\Users\joeay\OneDrive\Desktop\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.Cor
 C:\Users\joeay\OneDrive\Desktop\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.CopyComplete
 C:\Users\joeay\OneDrive\Desktop\Taskio\Taskio\Taskio\obj\Debug\Taskio.exe
 C:\Users\joeay\OneDrive\Desktop\Taskio\Taskio\Taskio\obj\Debug\Taskio.pdb
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskUserControl.resources
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.CopyComplete

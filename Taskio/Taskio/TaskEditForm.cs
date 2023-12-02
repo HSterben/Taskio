@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace Taskio
 {
-    public partial class TaskUserControl : UserControl
+    public partial class TaskEditForm : Form
     {
-        public TaskUserControl(string name, string description, int priority)
+        public TaskEditForm()
         {
             InitializeComponent();
-            this.taskName.Text = name;
-            this.priority.Text = Convert.ToString(priority);
+        }
+        private void editBtn_Click(object sender, EventArgs e)
+        {
 
         }
-
-        private void TaskUserControl_Click(object sender, EventArgs e)
+        private void deleteBtn_Click(object sender, EventArgs e)
         {
 
         }

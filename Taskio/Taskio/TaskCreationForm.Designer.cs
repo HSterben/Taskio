@@ -59,7 +59,7 @@
             // priorityLabel
             // 
             this.priorityLabel.AutoSize = true;
-            this.priorityLabel.Location = new System.Drawing.Point(34, 94);
+            this.priorityLabel.Location = new System.Drawing.Point(31, 137);
             this.priorityLabel.Name = "priorityLabel";
             this.priorityLabel.Size = new System.Drawing.Size(38, 13);
             this.priorityLabel.TabIndex = 2;
@@ -69,19 +69,20 @@
             // 
             this.nameText.Location = new System.Drawing.Point(114, 21);
             this.nameText.Name = "nameText";
-            this.nameText.Size = new System.Drawing.Size(100, 20);
+            this.nameText.Size = new System.Drawing.Size(182, 20);
             this.nameText.TabIndex = 3;
             // 
             // descriptionText
             // 
             this.descriptionText.Location = new System.Drawing.Point(114, 54);
+            this.descriptionText.Multiline = true;
             this.descriptionText.Name = "descriptionText";
-            this.descriptionText.Size = new System.Drawing.Size(100, 20);
+            this.descriptionText.Size = new System.Drawing.Size(182, 77);
             this.descriptionText.TabIndex = 4;
             // 
             // priority
             // 
-            this.priority.Location = new System.Drawing.Point(114, 87);
+            this.priority.Location = new System.Drawing.Point(114, 137);
             this.priority.Maximum = new decimal(new int[] {
             4,
             0,
@@ -94,7 +95,7 @@
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(114, 124);
+            this.addBtn.Location = new System.Drawing.Point(114, 173);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(100, 23);
             this.addBtn.TabIndex = 6;
@@ -106,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 159);
+            this.ClientSize = new System.Drawing.Size(334, 229);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.priority);
             this.Controls.Add(this.descriptionText);

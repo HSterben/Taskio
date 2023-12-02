@@ -63,15 +63,16 @@
             this.panel.Size = new System.Drawing.Size(15, 13);
             this.panel.TabIndex = 0;
             // 
-            // Task
+            // TaskUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.panel);
-            this.Name = "Task";
+            this.Name = "TaskUserControl";
             this.Size = new System.Drawing.Size(15, 13);
+            this.Click += new System.EventHandler(this.TaskUserControl_Click);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);

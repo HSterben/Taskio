@@ -11,6 +11,14 @@ namespace Taskio
         public string Description { get; set; }
         public int Priority { get; set; }
         public string Category { get; set; }
+
+        public Task(string name, string description, int priority, string category)
+        {
+            Name = name;
+            Description = description;
+            Priority = priority;
+            Category = category;
+        }
     }
 
     internal class Project
@@ -23,7 +31,6 @@ namespace Taskio
         public Project(string filePath)
         {
             _filePath = filePath;
-            Name = Path.GetFileNameWithoutExtension(filePath);
             Tasks = new List<Task>();
             UpdateCompletionPercentage();
         }

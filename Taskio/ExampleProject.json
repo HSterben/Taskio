@@ -1,5 +1,6 @@
 {
     "Project": {
+    	"Name": "Sample Project Name",
         "Tasks": [
             {
                 "Name": "Task 1",

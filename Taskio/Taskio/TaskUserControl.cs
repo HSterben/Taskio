@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Taskio
@@ -15,36 +8,12 @@ namespace Taskio
         private string description;
         private string tName;
         private string prior;
-        public String Description
-        {
-            get
-            {
-                return description;
-            }
-            set
-            {
-                description = value;
-            }
-        }
-        public String TName
-        {
-            get
-            {
-                return tName;
-            }
-            set
-            {
-                tName = value;
-            }
-        }
-        public String Prior
-        {
-            get { return prior; }
-            set { prior = value; }
-        }
+        public String Description { get; set; }
+        public String TName { get; set; }
+        public String Prior { get; set; }
         public EventHandler TaskClicked;
-        
-        public TaskUserControl(string name, string description, int priority)
+
+        public TaskUserControl(string name, string description, int priority) 
         {
             InitializeComponent();
             this.taskName.Text = name;

@@ -37,18 +37,19 @@
             // priority
             // 
             this.priority.AutoSize = true;
-            this.priority.Location = new System.Drawing.Point(12, 0);
-            this.priority.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.priority.Location = new System.Drawing.Point(17, 0);
+            this.priority.Margin = new System.Windows.Forms.Padding(9, 0, 4, 0);
             this.priority.Name = "priority";
-            this.priority.Size = new System.Drawing.Size(0, 13);
+            this.priority.Size = new System.Drawing.Size(0, 20);
             this.priority.TabIndex = 0;
             // 
             // taskName
             // 
             this.taskName.AutoSize = true;
-            this.taskName.Location = new System.Drawing.Point(3, 0);
+            this.taskName.Location = new System.Drawing.Point(4, 0);
+            this.taskName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.taskName.Name = "taskName";
-            this.taskName.Size = new System.Drawing.Size(0, 13);
+            this.taskName.Size = new System.Drawing.Size(0, 20);
             this.taskName.TabIndex = 1;
             // 
             // panel
@@ -59,19 +60,21 @@
             this.panel.Controls.Add(this.priority);
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(15, 13);
+            this.panel.Size = new System.Drawing.Size(281, 27);
             this.panel.TabIndex = 0;
             // 
             // TaskUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.panel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "TaskUserControl";
-            this.Size = new System.Drawing.Size(15, 13);
+            this.Size = new System.Drawing.Size(281, 27);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);

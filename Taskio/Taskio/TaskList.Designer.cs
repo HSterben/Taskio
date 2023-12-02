@@ -49,6 +49,7 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(302, 123);
             this.panel.TabIndex = 0;
+            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // listTitle
             // 
@@ -85,6 +86,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "...";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TaskList
             // 

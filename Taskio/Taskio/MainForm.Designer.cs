@@ -37,6 +37,7 @@
             this.taskListsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createTaskListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileDialogue = new System.Windows.Forms.OpenFileDialog();
+            this.contentLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.taskListsMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1024, 35);
+            this.menu.Size = new System.Drawing.Size(1024, 33);
             this.menu.TabIndex = 0;
             this.menu.Text = "Menu";
             // 
@@ -107,16 +108,25 @@
             // 
             this.fileDialogue.FileName = "fileDialogue";
             // 
+            // contentLayoutPanel
+            // 
+            this.contentLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            this.contentLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentLayoutPanel.Location = new System.Drawing.Point(0, 33);
+            this.contentLayoutPanel.Name = "contentLayoutPanel";
+            this.contentLayoutPanel.Size = new System.Drawing.Size(1024, 1003);
+            this.contentLayoutPanel.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Taskio.Properties.Resources.gradient1;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 1036);
+            this.Controls.Add(this.contentLayoutPanel);
             this.Controls.Add(this.menu);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.MainMenuStrip = this.menu;
@@ -140,6 +150,7 @@
         private System.Windows.Forms.ToolStripMenuItem taskListsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chooseBackgroundImageMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createTaskListMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel contentLayoutPanel;
     }
 }
 

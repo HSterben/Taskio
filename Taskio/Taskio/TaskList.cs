@@ -15,6 +15,7 @@ namespace Taskio
         public TaskList()
         {
             InitializeComponent();
+            this.BackColor = SystemColors.Control;
         }
 
         private void addTaskBtn_Click(object sender, EventArgs e)
@@ -64,6 +65,16 @@ namespace Taskio
                     }
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

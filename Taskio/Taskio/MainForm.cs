@@ -8,7 +8,7 @@ namespace Taskio
 {
     public partial class MainForm : Form
     {
-        private Project project {  get; set; }
+        private Project project { get; set; }
         private Task task { get; set; }
         public MainForm()
         {
@@ -17,7 +17,6 @@ namespace Taskio
 
         private void chooseBackgroundImageMenuItem_Click(object sender, EventArgs e)
         {
-            //to be improved if we have time
             OpenFileDialog fileDialog = new OpenFileDialog();
             string exeDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             DirectoryInfo parentDirectory = Directory.GetParent(exeDirectory);
@@ -35,12 +34,11 @@ namespace Taskio
         private void createTaskListMenuItem_Click(object sender, EventArgs e)
         {
             TaskList taskList = new TaskList();
-            this.Controls.Add(taskList);
+            contentLayoutPanel.Controls.Add(taskList);
         }
 
         private void openProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "JSON Files (*.json)|*.json";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -48,13 +46,23 @@ namespace Taskio
                 string filePath = openFileDialog.FileName;
                 project = new Project(filePath);
                 project.LoadProject();
+                this.Text = $"Taskio | {project.Name}";
             }
-
         }
 
         private void createNewProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "JSON Files (*.json)|*.json";
+            saveFileDialog.Title = "Create New Project";
 
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+                project = new Project();
+                project.CreateJSONFile(Path.GetDirectoryName(filePath), Path.GetFileName(filePath));
+                this.Text = $"Taskio | {project.Name}";
+            }
         }
     }
 }

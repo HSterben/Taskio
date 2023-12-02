@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Taskio
@@ -16,11 +9,9 @@ namespace Taskio
         public TaskEditForm(TaskUserControl task)
         {
             InitializeComponent();
-            {
-                this.nameText.Text = task.TName;
-                this.descriptionText.Text = task.Description;
-                this.priority.Text = task.Prior;
-            }
+            this.nameText.Text = task.TName;
+            this.descriptionText.Text = task.Description;
+            this.priority.Text = task.Prior;
             associatedTask = task;
 
         }

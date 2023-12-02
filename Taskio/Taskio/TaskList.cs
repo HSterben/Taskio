@@ -24,7 +24,7 @@ namespace Taskio
                 // Subscribe to the TaskAdded event to receive the data
                 form.TaskAdded += (name, description, priority) =>
                 {
-                    Task task = new Task(name, description, priority);
+                    TaskUserControl task = new TaskUserControl(name, description, priority);
                     panel.Controls.Remove(addTaskBtn);
                     panel.Controls.Add(task);
                     panel.Controls.Add(addTaskBtn);

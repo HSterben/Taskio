@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Taskio
 {
-    public partial class Task : UserControl
+    public partial class TaskUserControl : UserControl
     {
-        public Task(string name, string description, int priority)
+        public TaskUserControl(string name, string description, int priority)
         {
             InitializeComponent();
             this.taskName.Text = name;

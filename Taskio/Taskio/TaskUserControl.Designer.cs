@@ -1,6 +1,6 @@
 ﻿namespace Taskio
 {
-    partial class Task
+    partial class TaskUserControl
     {
         /// <summary> 
         /// Required designer variable.

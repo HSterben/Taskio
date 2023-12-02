@@ -46,10 +46,11 @@ namespace Taskio
                     // Subscribe to the  event to receive the data
                     form.TaskEdited += (name, description, priority) =>
                     {
-                        TaskUserControl task = new TaskUserControl(name, description, priority);
-                        panel.Controls.Remove(addTaskBtn);
+                        TaskUserControl updatedTask = new TaskUserControl(name, description, priority);
+                        updatedTask.TaskClicked += Task_Clicked; // Reattach the event handler
                         panel.Controls.Remove(clickedTask);
-                        panel.Controls.Add(task);
+                        panel.Controls.Add(updatedTask);
+                        panel.Controls.Remove(addTaskBtn);
                         panel.Controls.Add(addTaskBtn);
                     };
                     form.TaskDeleted += () =>

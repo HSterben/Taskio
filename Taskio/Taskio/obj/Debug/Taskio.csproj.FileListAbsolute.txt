@@ -44,3 +44,4 @@ C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\bin\Debug\Newtonsoft.Json.dll
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\bin\Debug\Newtonsoft.Json.xml
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskUserControl.resources
 C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.CopyComplete
+C:\Users\zlati\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskEditForm.resources

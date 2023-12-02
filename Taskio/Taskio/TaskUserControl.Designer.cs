@@ -72,7 +72,6 @@
             this.Controls.Add(this.panel);
             this.Name = "TaskUserControl";
             this.Size = new System.Drawing.Size(15, 13);
-            this.Click += new System.EventHandler(this.TaskUserControl_Click);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);

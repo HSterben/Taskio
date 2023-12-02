@@ -13,7 +13,35 @@ namespace Taskio
     public partial class TaskUserControl : UserControl
     {
         private string description;
-        public string Description { get; set; }
+        private string tName;
+        private string prior;
+        public String Description
+        {
+            get
+            {
+                return description;
+            }
+            set
+            {
+                description = value;
+            }
+        }
+        public String TName
+        {
+            get
+            {
+                return tName;
+            }
+            set
+            {
+                tName = value;
+            }
+        }
+        public String Prior
+        {
+            get { return prior; }
+            set { prior = value; }
+        }
         public EventHandler TaskClicked;
         
         public TaskUserControl(string name, string description, int priority)
@@ -22,7 +50,9 @@ namespace Taskio
             this.taskName.Text = name;
             this.priority.Text = Convert.ToString(priority);
             this.Description = description;
-           
+            this.TName = name;
+            this.Prior = Convert.ToString(priority);
+
             this.Click += TaskUserControl_Click;
             AttachClickEventToChildren(this);
         }

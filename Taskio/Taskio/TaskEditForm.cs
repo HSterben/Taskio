@@ -16,6 +16,11 @@ namespace Taskio
         public TaskEditForm(TaskUserControl task)
         {
             InitializeComponent();
+            {
+                this.nameText.Text = task.TName;
+                this.descriptionText.Text = task.Description;
+                this.priority.Text = task.Prior;
+            }
             associatedTask = task;
 
         }

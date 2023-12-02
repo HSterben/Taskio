@@ -23,7 +23,6 @@ namespace Taskio
             if (fileDialogue.ShowDialog() == DialogResult.OK)
             {
                 mainPanel.BackgroundImage = Image.FromFile(fileDialogue.FileName);
-
             }
         }
 
@@ -31,6 +30,16 @@ namespace Taskio
         {
             TaskList taskList = new TaskList();
             mainPanel.Controls.Add(taskList);
+        }
+
+        private void openProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createNewProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

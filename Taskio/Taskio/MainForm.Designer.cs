@@ -33,7 +33,6 @@
             this.fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.projectOverviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chooseBackgroundImageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taskListsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createTaskListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +57,6 @@
             this.fileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openProjectToolStripMenuItem,
             this.createNewProjectToolStripMenuItem,
-            this.projectOverviewToolStripMenuItem,
             this.chooseBackgroundImageMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
             this.fileMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -69,18 +67,14 @@
             this.openProjectToolStripMenuItem.Name = "openProjectToolStripMenuItem";
             this.openProjectToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
             this.openProjectToolStripMenuItem.Text = "Open Project";
+            this.openProjectToolStripMenuItem.Click += new System.EventHandler(this.openProjectToolStripMenuItem_Click);
             // 
             // createNewProjectToolStripMenuItem
             // 
             this.createNewProjectToolStripMenuItem.Name = "createNewProjectToolStripMenuItem";
             this.createNewProjectToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
             this.createNewProjectToolStripMenuItem.Text = "Create New Project";
-            // 
-            // projectOverviewToolStripMenuItem
-            // 
-            this.projectOverviewToolStripMenuItem.Name = "projectOverviewToolStripMenuItem";
-            this.projectOverviewToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
-            this.projectOverviewToolStripMenuItem.Text = "Project Overview";
+            this.createNewProjectToolStripMenuItem.Click += new System.EventHandler(this.createNewProjectToolStripMenuItem_Click);
             // 
             // chooseBackgroundImageMenuItem
             // 
@@ -97,7 +91,7 @@
             this.taskListsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createTaskListMenuItem});
             this.taskListsMenuItem.Name = "taskListsMenuItem";
-            this.taskListsMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.taskListsMenuItem.Size = new System.Drawing.Size(67, 20);
             this.taskListsMenuItem.Text = "Task Lists";
             // 
             // createTaskListMenuItem
@@ -146,7 +140,6 @@
         private System.Windows.Forms.ToolStripMenuItem openProjectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createNewProjectToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog fileDialogue;
-        private System.Windows.Forms.ToolStripMenuItem projectOverviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem taskListsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chooseBackgroundImageMenuItem;
         private System.Windows.Forms.FlowLayoutPanel mainPanel;

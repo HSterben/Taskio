@@ -63,3 +63,4 @@ C:\Users\DanOe\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.CoreCompil
 C:\Users\DanOe\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.csproj.CopyComplete
 C:\Users\DanOe\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.exe
 C:\Users\DanOe\Downloads\Taskio\Taskio\Taskio\obj\Debug\Taskio.pdb
+C:\Users\joeay\OneDrive\Desktop\Taskio\Taskio\Taskio\obj\Debug\Taskio.TaskEditForm.resources

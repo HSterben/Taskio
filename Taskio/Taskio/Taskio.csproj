@@ -96,6 +96,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TaskEditForm.resx">
       <DependentUpon>TaskEditForm.cs</DependentUpon>
@@ -119,6 +120,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\gradient %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\gradient %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\gradient %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\gradient 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\gradient.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\gradient.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

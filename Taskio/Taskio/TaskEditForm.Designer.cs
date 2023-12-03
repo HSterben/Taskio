@@ -41,9 +41,10 @@
             // 
             // editBtn
             // 
-            this.editBtn.Location = new System.Drawing.Point(190, 189);
+            this.editBtn.Location = new System.Drawing.Point(285, 291);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(100, 23);
+            this.editBtn.Size = new System.Drawing.Size(150, 35);
             this.editBtn.TabIndex = 13;
             this.editBtn.Text = "Save Changes";
             this.editBtn.UseVisualStyleBackColor = true;
@@ -51,7 +52,8 @@
             // 
             // priority
             // 
-            this.priority.Location = new System.Drawing.Point(108, 137);
+            this.priority.Location = new System.Drawing.Point(162, 211);
+            this.priority.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.priority.Maximum = new decimal(new int[] {
             4,
             0,
@@ -59,57 +61,63 @@
             0});
             this.priority.Name = "priority";
             this.priority.ReadOnly = true;
-            this.priority.Size = new System.Drawing.Size(100, 20);
+            this.priority.Size = new System.Drawing.Size(150, 26);
             this.priority.TabIndex = 12;
             // 
             // descriptionText
             // 
-            this.descriptionText.Location = new System.Drawing.Point(108, 54);
+            this.descriptionText.Location = new System.Drawing.Point(162, 83);
+            this.descriptionText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.descriptionText.Multiline = true;
             this.descriptionText.Name = "descriptionText";
-            this.descriptionText.Size = new System.Drawing.Size(182, 77);
+            this.descriptionText.Size = new System.Drawing.Size(271, 116);
             this.descriptionText.TabIndex = 11;
             // 
             // nameText
             // 
-            this.nameText.Location = new System.Drawing.Point(108, 21);
+            this.nameText.Location = new System.Drawing.Point(162, 32);
+            this.nameText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nameText.Name = "nameText";
-            this.nameText.Size = new System.Drawing.Size(182, 20);
+            this.nameText.Size = new System.Drawing.Size(271, 26);
             this.nameText.TabIndex = 10;
             // 
             // priorityLabel
             // 
             this.priorityLabel.AutoSize = true;
-            this.priorityLabel.Location = new System.Drawing.Point(25, 137);
+            this.priorityLabel.Location = new System.Drawing.Point(38, 211);
+            this.priorityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.priorityLabel.Name = "priorityLabel";
-            this.priorityLabel.Size = new System.Drawing.Size(38, 13);
+            this.priorityLabel.Size = new System.Drawing.Size(56, 20);
             this.priorityLabel.TabIndex = 9;
             this.priorityLabel.Text = "Priority";
             // 
             // descriptionLabel
             // 
             this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.Location = new System.Drawing.Point(25, 57);
+            this.descriptionLabel.Location = new System.Drawing.Point(38, 88);
+            this.descriptionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(66, 13);
+            this.descriptionLabel.Size = new System.Drawing.Size(97, 20);
             this.descriptionLabel.TabIndex = 8;
             this.descriptionLabel.Text = "Description: ";
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(25, 24);
+            this.nameLabel.Location = new System.Drawing.Point(38, 37);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(68, 13);
+            this.nameLabel.Size = new System.Drawing.Size(97, 20);
             this.nameLabel.TabIndex = 7;
             this.nameLabel.Text = "Task Name: ";
             // 
             // deleteBtn
             // 
             this.deleteBtn.ForeColor = System.Drawing.Color.IndianRed;
-            this.deleteBtn.Location = new System.Drawing.Point(28, 189);
+            this.deleteBtn.Location = new System.Drawing.Point(42, 291);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(100, 23);
+            this.deleteBtn.Size = new System.Drawing.Size(150, 35);
             this.deleteBtn.TabIndex = 14;
             this.deleteBtn.Text = "Delete Task";
             this.deleteBtn.UseVisualStyleBackColor = true;
@@ -117,9 +125,9 @@
             // 
             // TaskEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 235);
+            this.ClientSize = new System.Drawing.Size(489, 362);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.editBtn);
             this.Controls.Add(this.priority);
@@ -128,6 +136,7 @@
             this.Controls.Add(this.priorityLabel);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.nameLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "TaskEditForm";
             this.Text = "Edit Task";
             ((System.ComponentModel.ISupportInitialize)(this.priority)).EndInit();

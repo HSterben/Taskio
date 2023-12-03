@@ -10,7 +10,11 @@ namespace Taskio
     {
         private TaskUserControl selectedTask;
         public Project project { get; set; }
-        public string TaskTitle { get; set; }
+        public string TaskTitle
+        {
+            get { return listTitle.Text; }
+            set { listTitle.Text = value; }
+        }
 
         public TaskList(Project p)
         {
@@ -120,6 +124,12 @@ namespace Taskio
         private void RenameTask(String newName)
         {
             listTitle.Text = newName;
+        }
+        public void AddTask(TaskUserControl taskControl)
+        {
+            panel.Controls.Remove(addTaskBtn);
+            panel.Controls.Add(taskControl);
+            panel.Controls.Add(addTaskBtn);
         }
     }
 }

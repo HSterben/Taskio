@@ -98,6 +98,19 @@ namespace Taskio
                 CompletionPercentage = (double)completedTasks / totalTasks * 100;
             }
         }
+        private void UpdateProjectTaskData(TaskUserControl taskControl)
+        {
+            var task = this.Tasks.FirstOrDefault(t => t.Name == taskControl.TName); // Assuming Name is a unique identifier
+            if (task != null)
+            {
+                task.Name = taskControl.TName;
+                task.Description = taskControl.Description;
+                task.Priority = taskControl.Priority;
+                task.Category = taskControl.TName;
+            }
+            SaveTasks();
+            UpdateCompletionPercentage();
+        }
     }
 
     public class ProjectData

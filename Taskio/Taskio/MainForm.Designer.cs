@@ -38,11 +38,14 @@
             this.createTaskListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileDialogue = new System.Windows.Forms.OpenFileDialog();
             this.contentLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.projectProgressBar = new System.Windows.Forms.ProgressBar();
+            this.progressLabel = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
             // 
+            this.menu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenuItem,
@@ -99,7 +102,7 @@
             // 
             this.createTaskListMenuItem.Name = "createTaskListMenuItem";
             this.createTaskListMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.createTaskListMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.createTaskListMenuItem.Size = new System.Drawing.Size(259, 34);
             this.createTaskListMenuItem.Text = "Create List";
             this.createTaskListMenuItem.Click += new System.EventHandler(this.createTaskListMenuItem_Click);
             // 
@@ -110,11 +113,27 @@
             // contentLayoutPanel
             // 
             this.contentLayoutPanel.BackColor = System.Drawing.Color.Transparent;
-            this.contentLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.contentLayoutPanel.Location = new System.Drawing.Point(0, 33);
             this.contentLayoutPanel.Name = "contentLayoutPanel";
             this.contentLayoutPanel.Size = new System.Drawing.Size(1024, 1003);
             this.contentLayoutPanel.TabIndex = 1;
+            // 
+            // projectProgressBar
+            // 
+            this.projectProgressBar.Location = new System.Drawing.Point(783, 4);
+            this.projectProgressBar.Name = "projectProgressBar";
+            this.projectProgressBar.Size = new System.Drawing.Size(229, 26);
+            this.projectProgressBar.TabIndex = 0;
+            // 
+            // progressLabel
+            // 
+            this.progressLabel.AutoSize = true;
+            this.progressLabel.Location = new System.Drawing.Point(644, 9);
+            this.progressLabel.Name = "progressLabel";
+            this.progressLabel.Size = new System.Drawing.Size(133, 20);
+            this.progressLabel.TabIndex = 2;
+            this.progressLabel.Text = "Project Progress: ";
             // 
             // MainForm
             // 
@@ -123,6 +142,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 1036);
+            this.Controls.Add(this.progressLabel);
+            this.Controls.Add(this.projectProgressBar);
             this.Controls.Add(this.contentLayoutPanel);
             this.Controls.Add(this.menu);
             this.DoubleBuffered = true;
@@ -150,6 +171,8 @@
         private System.Windows.Forms.ToolStripMenuItem chooseBackgroundImageMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createTaskListMenuItem;
         private System.Windows.Forms.FlowLayoutPanel contentLayoutPanel;
+        private System.Windows.Forms.ProgressBar projectProgressBar;
+        private System.Windows.Forms.Label progressLabel;
     }
 }
 

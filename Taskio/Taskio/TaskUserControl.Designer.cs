@@ -64,6 +64,7 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(281, 27);
             this.panel.TabIndex = 0;
+            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // TaskUserControl
             // 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -53,6 +54,8 @@ namespace Taskio
                 project = new Project(filePath);
                 project.LoadProject();
                 this.Text = $"Taskio | {project.Name}";
+                DisplayTasksByCategory();
+                projectProgressBar.Value = (int)project.CompletionPercentage;
             }
         }
 
@@ -70,5 +73,29 @@ namespace Taskio
                 this.Text = $"Taskio | {project.Name}";
             }
         }
+
+        private void DisplayTasksByCategory()
+        {
+            contentLayoutPanel.Controls.Clear();
+
+            var groupedTasks = project.Tasks.GroupBy(t => t.Category);
+
+            foreach (var group in groupedTasks)
+            {
+                TaskList taskList = new TaskList(project)
+                {
+                    TaskTitle = group.Key // Set the task list title to the category name
+                };
+
+                foreach (var task in group)
+                {
+                    TaskUserControl taskControl = new TaskUserControl(task.Name, task.Description, task.Priority);
+                    taskList.AddTask(taskControl);
+                }
+                contentLayoutPanel.Controls.Add(taskList);
+            }
+        }
+
+
     }
 }

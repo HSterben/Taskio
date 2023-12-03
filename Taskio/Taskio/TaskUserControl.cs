@@ -38,7 +38,11 @@ namespace Taskio
         }
         private void TaskUserControl_Click(object sender, EventArgs e)
         {
-            // Raise the TaskClicked event when the TaskUserControl is clicked
+            TaskClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void panel_Paint(object sender, PaintEventArgs e)
+        {
             TaskClicked?.Invoke(this, EventArgs.Empty);
         }
     }

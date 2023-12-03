@@ -52,6 +52,7 @@
             // 
             // listTitle
             // 
+            this.listTitle.AcceptsReturn = true;
             this.listTitle.BackColor = System.Drawing.SystemColors.Control;
             this.listTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);

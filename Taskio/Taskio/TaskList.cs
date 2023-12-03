@@ -38,6 +38,7 @@ namespace Taskio
                     panel.Controls.Remove(addTaskBtn);
                     panel.Controls.Add(task);
                     panel.Controls.Add(addTaskBtn);
+                    project.Tasks.Add(new Task(name, description, priority, category));
                 };
 
                 form.ShowDialog();

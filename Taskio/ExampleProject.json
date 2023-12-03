@@ -12,13 +12,19 @@
         "Name": "yes",
         "Description": "test",
         "Priority": 1,
-        "Category": "Done"
+        "Category": "To do"
       },
       {
         "Name": "Task 5",
         "Description": "Description of Task 5",
         "Priority": 4,
-        "Category": "Done"
+        "Category": "To do"
+      },
+      {
+        "Name": "dfghdfg",
+        "Description": "dfgdfg",
+        "Priority": 3,
+        "Category": "To do"
       }
     ]
   }

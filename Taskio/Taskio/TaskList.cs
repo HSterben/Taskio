@@ -15,63 +15,44 @@ namespace Taskio
             get { return listTitle.Text; }
             set { listTitle.Text = value; }
         }
-
-        public TaskList(Project p)
+        public MainForm mainForm { get; set; }
+        public TaskList(Project p, MainForm m)
         {
             InitializeComponent();
             this.BackColor = SystemColors.Control;
             project = p;
             selectedTask = null;
+            mainForm = m;
         }
 
         private void addTaskBtn_Click(object sender, EventArgs e)
         {
-            using (TaskCreationForm form = new TaskCreationForm())
+            using (TaskCreationForm form = new TaskCreationForm(this))
             {
-                // Subscribe to the TaskAdded event to receive the data
-                form.TaskAdded += (name, description, priority) =>
+                form.TaskAdded += (name, description, category, priority) =>
                 {
-                    TaskUserControl task = new TaskUserControl(name, description, priority);
-                    task.TaskClicked += Task_Clicked;
+                    TaskUserControl task = new TaskUserControl(name, description, priority, category, this);
+                    task.TaskEdited += taskEdited;
+                    task.TaskDeleted += TaskDeleted;
+
                     panel.Controls.Remove(addTaskBtn);
                     panel.Controls.Add(task);
                     panel.Controls.Add(addTaskBtn);
                 };
 
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    // The event handler will handle the data when the form is closed
-                }
+                form.ShowDialog();
             }
         }
-        private void Task_Clicked(object sender, EventArgs e)
+        public void taskEdited(TaskUserControl taskControl)
         {
 
-            if (sender is TaskUserControl clickedTask)
-            {
-                selectedTask = clickedTask;
-                using (TaskEditForm form = new TaskEditForm(clickedTask))
-                {
-                    form.TaskEdited += (name, description, priority) =>
-                    {
-                        // Update the clicked task directly
-                        clickedTask.TName = name;
-                        clickedTask.Description = description;
-                        clickedTask.Priority = priority;
-                    };
-                    form.TaskDeleted += () =>
-                    {
-                        panel.Controls.Remove(clickedTask);
-                    };
-
-                    if (form.ShowDialog() == DialogResult.OK)
-                    {
-                        // If needed, handle additional logic after the task is edited
-                    }
-                }
-            }
         }
 
+        public void TaskDeleted(TaskUserControl task)
+        {
+            project.DeleteTaskByName(task.TName);
+            panel.Controls.Remove(task);
+        }
         private void utilityButton_Click(object sender, EventArgs e)
         {
             using (UtilityForm form = new UtilityForm(listTitle.Text, project.Tasks))

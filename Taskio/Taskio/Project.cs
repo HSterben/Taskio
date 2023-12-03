@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace Taskio
 {
@@ -69,7 +71,13 @@ namespace Taskio
                 UpdateCompletionPercentage();
             }
         }
-
+        public void DeleteTaskByName(string taskName)
+        {
+            Tasks.RemoveAll(task => task.Name == taskName);
+            SaveTasks();
+            UpdateCompletionPercentage();
+            Console.WriteLine("Deleted task " +  taskName);
+        }
         public void SaveTasks()
         {
             var projectData = new ProjectData { Project = new ProjectContainer { Name = this.Name, Tasks = this.Tasks } };
@@ -77,14 +85,6 @@ namespace Taskio
             File.WriteAllText(_filePath, json);
             UpdateCompletionPercentage();
         }
-
-        public void DeleteTask(Task t)
-        {
-            Tasks.RemoveAll(task => task.Name == t.Name && task.Description == t.Description && task.Priority == t.Priority && task.Category == t.Category);
-            SaveTasks();
-            UpdateCompletionPercentage();
-        }
-
         private void UpdateCompletionPercentage()
         {
             if (Tasks == null || !Tasks.Any())
@@ -98,18 +98,19 @@ namespace Taskio
                 CompletionPercentage = (double)completedTasks / totalTasks * 100;
             }
         }
-        private void UpdateProjectTaskData(TaskUserControl taskControl)
+        public void UpdateProjectTaskData(TaskUserControl taskControl, string oldName)
         {
-            var task = this.Tasks.FirstOrDefault(t => t.Name == taskControl.TName); // Assuming Name is a unique identifier
+            var task = Tasks.Find(t => string.Equals(t.Name, oldName, StringComparison.OrdinalIgnoreCase));
             if (task != null)
             {
+                Console.WriteLine("New task name " + taskControl.TName);
                 task.Name = taskControl.TName;
                 task.Description = taskControl.Description;
                 task.Priority = taskControl.Priority;
-                task.Category = taskControl.TName;
+                task.Category = taskControl.Category;
+                SaveTasks();
+                Console.WriteLine("Updated project");
             }
-            SaveTasks();
-            UpdateCompletionPercentage();
         }
     }
 

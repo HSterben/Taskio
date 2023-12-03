@@ -36,12 +36,14 @@
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.deleteBtn = new System.Windows.Forms.Button();
+            this.categoryTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.priority)).BeginInit();
             this.SuspendLayout();
             // 
             // editBtn
             // 
-            this.editBtn.Location = new System.Drawing.Point(285, 291);
+            this.editBtn.Location = new System.Drawing.Point(283, 323);
             this.editBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(150, 35);
@@ -114,7 +116,7 @@
             // deleteBtn
             // 
             this.deleteBtn.ForeColor = System.Drawing.Color.IndianRed;
-            this.deleteBtn.Location = new System.Drawing.Point(42, 291);
+            this.deleteBtn.Location = new System.Drawing.Point(40, 323);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(150, 35);
@@ -123,11 +125,31 @@
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // categoryTextBox
+            // 
+            this.categoryTextBox.Location = new System.Drawing.Point(162, 262);
+            this.categoryTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.categoryTextBox.Name = "categoryTextBox";
+            this.categoryTextBox.Size = new System.Drawing.Size(271, 26);
+            this.categoryTextBox.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 267);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Task Category: ";
+            // 
             // TaskEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 362);
+            this.ClientSize = new System.Drawing.Size(489, 384);
+            this.Controls.Add(this.categoryTextBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.editBtn);
             this.Controls.Add(this.priority);
@@ -155,5 +177,7 @@
         private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.TextBox categoryTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }

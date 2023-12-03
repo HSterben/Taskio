@@ -31,6 +31,7 @@
             this.priority = new System.Windows.Forms.Label();
             this.taskName = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.editButton = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,13 +59,24 @@
             this.panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel.Controls.Add(this.taskName);
             this.panel.Controls.Add(this.priority);
+            this.panel.Controls.Add(this.editButton);
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(281, 27);
+            this.panel.Size = new System.Drawing.Size(322, 42);
             this.panel.TabIndex = 0;
             this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
+            // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(24, 3);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(67, 32);
+            this.editButton.TabIndex = 1;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // TaskUserControl
             // 
@@ -75,7 +87,8 @@
             this.Controls.Add(this.panel);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "TaskUserControl";
-            this.Size = new System.Drawing.Size(281, 27);
+            this.Size = new System.Drawing.Size(322, 42);
+            this.Click += new System.EventHandler(this.TaskUserControl_Click);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);
@@ -88,5 +101,6 @@
         private System.Windows.Forms.Label priority;
         private System.Windows.Forms.Label taskName;
         private System.Windows.Forms.FlowLayoutPanel panel;
+        private System.Windows.Forms.Button editButton;
     }
 }

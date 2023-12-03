@@ -107,9 +107,9 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel panel;
-        private System.Windows.Forms.TextBox listTitle;
-        private System.Windows.Forms.Button addTaskBtn;
-        private System.Windows.Forms.Button utilityButton;
+        public System.Windows.Forms.FlowLayoutPanel panel;
+        public System.Windows.Forms.TextBox listTitle;
+        public System.Windows.Forms.Button addTaskBtn;
+        public System.Windows.Forms.Button utilityButton;
     }
 }

@@ -14,6 +14,7 @@ namespace Taskio
         public MainForm()
         {
             InitializeComponent();
+            MessageBox.Show("Hello! Welcome to Taskio!\nTo start, please click on the file menu in the top left and either create a project or open an existing one! \nHope you enjoy!");
         }
 
         private void chooseBackgroundImageMenuItem_Click(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace Taskio
                 return;
             }
 
-            TaskList taskList = new TaskList(project);
+            TaskList taskList = new TaskList(project, this);
             contentLayoutPanel.Controls.Add(taskList);
         }
 
@@ -74,7 +75,7 @@ namespace Taskio
             }
         }
 
-        private void DisplayTasksByCategory()
+        public void DisplayTasksByCategory()
         {
             contentLayoutPanel.Controls.Clear();
 
@@ -82,20 +83,24 @@ namespace Taskio
 
             foreach (var group in groupedTasks)
             {
-                TaskList taskList = new TaskList(project)
+                TaskList taskList = new TaskList(project, this)
                 {
                     TaskTitle = group.Key // Set the task list title to the category name
                 };
 
                 foreach (var task in group)
                 {
-                    TaskUserControl taskControl = new TaskUserControl(task.Name, task.Description, task.Priority);
+                    TaskUserControl taskControl = new TaskUserControl(task.Name, task.Description, task.Priority, task.Category, taskList);
                     taskList.AddTask(taskControl);
                 }
                 contentLayoutPanel.Controls.Add(taskList);
             }
+            projectProgressBar.Value = (int)project.CompletionPercentage;
         }
 
-
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MessageBox.Show("Thank you for using Taskio!");
+        }
     }
 }

@@ -72,6 +72,8 @@ namespace Taskio
                 project = new Project();
                 project.CreateJSONFile(Path.GetDirectoryName(filePath), Path.GetFileName(filePath));
                 this.Text = $"Taskio | {project.Name}";
+                DisplayTasksByCategory();
+                projectProgressBar.Value = (int)project.CompletionPercentage;
             }
         }
 

@@ -33,7 +33,13 @@ namespace Taskio
 
         private void createTaskListMenuItem_Click(object sender, EventArgs e)
         {
-            TaskList taskList = new TaskList();
+            if (project == null)
+            {
+                MessageBox.Show("Please open a project first.");
+                return;
+            }
+
+            TaskList taskList = new TaskList(project);
             contentLayoutPanel.Controls.Add(taskList);
         }
 

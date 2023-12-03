@@ -31,7 +31,7 @@
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
             this.listTitle = new System.Windows.Forms.TextBox();
             this.addTaskBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.utilityButton = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +41,7 @@
             this.panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel.Controls.Add(this.listTitle);
             this.panel.Controls.Add(this.addTaskBtn);
-            this.panel.Controls.Add(this.button1);
+            this.panel.Controls.Add(this.utilityButton);
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.panel.Location = new System.Drawing.Point(0, 0);
@@ -49,7 +49,6 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(302, 123);
             this.panel.TabIndex = 0;
-            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // listTitle
             // 
@@ -77,16 +76,16 @@
             this.addTaskBtn.UseVisualStyleBackColor = true;
             this.addTaskBtn.Click += new System.EventHandler(this.addTaskBtn_Click);
             // 
-            // button1
+            // utilityButton
             // 
-            this.button1.Location = new System.Drawing.Point(255, 83);
-            this.button1.Margin = new System.Windows.Forms.Padding(255, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.utilityButton.Location = new System.Drawing.Point(255, 83);
+            this.utilityButton.Margin = new System.Windows.Forms.Padding(255, 5, 4, 5);
+            this.utilityButton.Name = "utilityButton";
+            this.utilityButton.Size = new System.Drawing.Size(42, 35);
+            this.utilityButton.TabIndex = 0;
+            this.utilityButton.Text = "...";
+            this.utilityButton.UseVisualStyleBackColor = true;
+            this.utilityButton.Click += new System.EventHandler(this.utilityButton_Click);
             // 
             // TaskList
             // 
@@ -110,6 +109,6 @@
         private System.Windows.Forms.FlowLayoutPanel panel;
         private System.Windows.Forms.TextBox listTitle;
         private System.Windows.Forms.Button addTaskBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button utilityButton;
     }
 }

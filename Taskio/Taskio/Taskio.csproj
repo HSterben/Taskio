@@ -82,6 +82,12 @@
     <Compile Include="TaskUserControl.Designer.cs">
       <DependentUpon>TaskUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UtilityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityForm.Designer.cs">
+      <DependentUpon>UtilityForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="TaskCreationForm.resx">
       <DependentUpon>TaskCreationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaskUserControl.resx">
       <DependentUpon>TaskUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityForm.resx">
+      <DependentUpon>UtilityForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

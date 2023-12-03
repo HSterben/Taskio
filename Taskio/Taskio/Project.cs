@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Taskio
 {
-    internal class Task
+    public class Task
     {
         public string Name { get; set; }
         public string Description { get; set; }
@@ -21,7 +21,7 @@ namespace Taskio
         }
     }
 
-    internal class Project
+    public class Project
     {
         public string Name { get; set; }
         public List<Task> Tasks { get; set; }
@@ -100,12 +100,12 @@ namespace Taskio
         }
     }
 
-    internal class ProjectData
+    public class ProjectData
     {
         public ProjectContainer Project { get; set; }
     }
 
-    internal class ProjectContainer
+    public class ProjectContainer
     {
         public string Name { get; set; }
         public List<Task> Tasks { get; set; }

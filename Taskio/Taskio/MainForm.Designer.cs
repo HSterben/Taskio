@@ -43,7 +43,6 @@
             // 
             // menu
             // 
-            this.menu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenuItem,
@@ -100,7 +99,7 @@
             // 
             this.createTaskListMenuItem.Name = "createTaskListMenuItem";
             this.createTaskListMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.createTaskListMenuItem.Size = new System.Drawing.Size(259, 34);
+            this.createTaskListMenuItem.Size = new System.Drawing.Size(270, 34);
             this.createTaskListMenuItem.Text = "Create List";
             this.createTaskListMenuItem.Click += new System.EventHandler(this.createTaskListMenuItem_Click);
             // 

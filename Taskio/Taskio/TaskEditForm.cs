@@ -11,7 +11,7 @@ namespace Taskio
             InitializeComponent();
             this.nameText.Text = task.TName;
             this.descriptionText.Text = task.Description;
-            this.priority.Text = task.Prior;
+            this.priority.Text = task.Priority.ToString();
             associatedTask = task;
 
         }

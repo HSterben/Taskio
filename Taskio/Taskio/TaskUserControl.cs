@@ -5,22 +5,20 @@ namespace Taskio
 {
     public partial class TaskUserControl : UserControl
     {
-        private string description;
-        private string tName;
-        private string prior;
         public String Description { get; set; }
-        public String TName { get; set; }
-        public String Prior { get; set; }
+        private string _tName;
+        public string TName { get; set; }
+        public int Priority { get; set; }
         public EventHandler TaskClicked;
 
-        public TaskUserControl(string name, string description, int priority) 
+        public TaskUserControl(string name, string description, int priority)
         {
             InitializeComponent();
             this.taskName.Text = name;
             this.priority.Text = Convert.ToString(priority);
             this.Description = description;
             this.TName = name;
-            this.Prior = Convert.ToString(priority);
+            this.Priority = priority;
 
             this.Click += TaskUserControl_Click;
             AttachClickEventToChildren(this);
@@ -43,7 +41,5 @@ namespace Taskio
             // Raise the TaskClicked event when the TaskUserControl is clicked
             TaskClicked?.Invoke(this, EventArgs.Empty);
         }
-
-
     }
 }
